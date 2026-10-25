@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://syarabi.pages.dev/sitemap.xml

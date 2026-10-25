@@ -1,0 +1,3414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ─── Security ─────────────────────────────────────────────────────────── -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'none';
+    script-src  'sha256-tb8Jo8yr9hZ+zmysb0mkut+Cvf76LM3W25DIBpaLrgE='
+                'sha256-lezFlmAeu1+qB2GPBZYerIv7Qh27F6CkWzeFEEN081s='
+                'sha256-mhZY1lhVoGVXzh9Y3EPnVbMTBlY77uOEt6HAoRmwPH8=';
+    style-src   'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src    https://fonts.gstatic.com;
+    img-src     'self' data:;
+    connect-src 'self';
+    frame-src   'none';
+    object-src  'none';
+    base-uri    'self';
+    form-action 'none';
+    upgrade-insecure-requests;
+  ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─── Identity ─────────────────────────────────────────────────────────── -->
+  <title>Samin Yeasar Arabi — Portfolio</title>
+  <link rel="canonical" href="https://syarabi.pages.dev/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' font-size='80' text-anchor='middle' dominant-baseline='central'>👽</text></svg>" />
+
+  <!-- ─── Theme ─────────────────────────────────────────────────────────────── -->
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color"  content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color"  content="#111110" media="(prefers-color-scheme: dark)" />
+
+  <!-- ─── SEO ──────────────────────────────────────────────────────────────── -->
+  <meta name="description" content="Samin Yeasar Arabi — Full Stack Developer &amp; AI Engineer building products at the intersection of engineering and intelligence." />
+  <meta name="author"      content="Samin Yeasar Arabi" />
+  <meta name="robots"      content="index, follow" />
+  <meta name="googlebot"   content="index, follow, max-image-preview:large" />
+  <meta name="referrer"    content="strict-origin-when-cross-origin" />
+
+  <!-- ─── Open Graph ───────────────────────────────────────────────────────── -->
+  <meta property="og:type"         content="website" />
+  <meta property="og:locale"       content="en_US" />
+  <meta property="og:site_name"    content="Samin Yeasar Arabi" />
+  <meta property="og:title"        content="Samin Yeasar Arabi — Portfolio" />
+  <meta property="og:description"  content="Full Stack Developer &amp; AI Engineer building products at the intersection of engineering and intelligence." />
+  <meta property="og:url"          content="https://syarabi.pages.dev/" />
+  <meta property="og:image"        content="https://syarabi.pages.dev/image.jpg" />
+  <meta property="og:image:alt"    content="Samin Yeasar Arabi — Portfolio" />
+  <meta property="og:image:type"   content="image/jpeg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="1200" />
+
+  <!-- ─── Twitter Card ─────────────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:site"        content="@arabi" />
+  <meta name="twitter:creator"     content="@arabi" />
+  <meta name="twitter:title"       content="Samin Yeasar Arabi — Portfolio" />
+  <meta name="twitter:description" content="Full Stack Developer &amp; AI Engineer building products at the intersection of engineering and intelligence." />
+  <meta name="twitter:image"       content="https://syarabi.pages.dev/image.jpg" />
+  <meta name="twitter:image:alt"   content="Samin Yeasar Arabi — Portfolio" />
+
+  <!-- ─── Fonts ────────────────────────────────────────────────────────────── -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="preconnect"   href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect"   href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ─── Theme Init (inline — must run before first paint) ────────────────── -->
+  <script>
+(function () {
+  var s = localStorage.getItem('sya-theme');
+  var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', s || (d ? 'dark' : 'light'));
+  // If the user previously opted out of the welcome screen, mark <html> so
+  // CSS can hide the overlay before first paint and JS can skip it entirely.
+  if (localStorage.getItem('sya-skip-welcome') === '1') {
+    document.documentElement.classList.add('ws-skip');
+  }
+})();
+</script>
+
+  <!-- ─── Font Load (print→all swap trick avoids render-blocking) ──────────── -->
+  <link rel="stylesheet" media="print" data-font-swap href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" />
+  <script>
+(function () {
+  var l = document.querySelector('link[data-font-swap]');
+  if (l) l.media = 'all';
+})();
+</script>
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <!-- ─── Structured Data ──────────────────────────────────────────────────── -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://syarabi.pages.dev/#person",
+      "name": "Samin Yeasar Arabi",
+      "alternateName": "SYA",
+      "url": "https://syarabi.pages.dev/",
+      "email": "arabi@email.com",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://syarabi.pages.dev/image.jpg",
+        "width": 1200,
+        "height": 1200
+      },
+      "jobTitle": "Full Stack Developer & AI Engineer",
+      "description": "Full Stack Developer and AI Engineer building products at the intersection of engineering and intelligence. Specialising in React, Next.js, Flutter, C++, Python, and LLM fine-tuning.",
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Full Stack Developer & AI Engineer",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "Dhaka"
+        },
+        "skills": "React, Next.js, Flutter, Dart, C++, Python, Julia, LLM Fine-tuning, AI Pipelines, Neural Networks"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Independent"
+      },
+      "knowsAbout": [
+        "Full Stack Development",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Large Language Models",
+        "LLM Fine-tuning",
+        "React",
+        "Next.js",
+        "Flutter",
+        "C++",
+        "Python",
+        "Julia",
+        "Web Development",
+        "Mobile Development",
+        "AI Pipelines",
+        "Neural Networks"
+      ],
+      "knowsLanguage": {
+        "@type": "Language",
+        "name": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dhaka",
+        "addressCountry": "BD"
+      },
+      "sameAs": [
+        "https://github.com/arabi",
+        "https://linkedin.com/in/arabi",
+        "https://twitter.com/arabi"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://syarabi.pages.dev/"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "AI Inference Dashboard",
+          "description": "Real-time LLM monitoring & evaluation interface",
+          "url": "https://gadgetguide.pages.dev/",
+          "applicationCategory": "DeveloperApplication",
+          "author": { "@id": "https://syarabi.pages.dev/#person" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Cross-Platform Wallpaper App",
+          "description": "Flutter application with dynamic wallpaper management",
+          "url": "https://arabi.pages.dev/",
+          "applicationCategory": "MultimediaApplication",
+          "author": { "@id": "https://syarabi.pages.dev/#person" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "High-Performance Compute Engine",
+          "description": "Scientific computation library optimized for throughput",
+          "url": "https://alieninquran.pages.dev/",
+          "applicationCategory": "DeveloperApplication",
+          "author": { "@id": "https://syarabi.pages.dev/#person" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "LLM Fine-tuning Pipeline",
+          "description": "End-to-end training & evaluation framework for language models",
+          "url": "https://sidebar7.pages.dev/",
+          "applicationCategory": "DeveloperApplication",
+          "author": { "@id": "https://syarabi.pages.dev/#person" }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Star World",
+          "description": "An immersive interactive experience built for the web",
+          "url": "https://starworld.pages.dev/",
+          "author": { "@id": "https://syarabi.pages.dev/#person" }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://syarabi.pages.dev/#website",
+      "url": "https://syarabi.pages.dev/",
+      "name": "Samin Yeasar Arabi — Portfolio",
+      "description": "Portfolio of Samin Yeasar Arabi, Full Stack Developer & AI Engineer.",
+      "author": { "@id": "https://syarabi.pages.dev/#person" },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>
+
+<style>
+
+/* ─── Reset ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Design Tokens (light theme defaults) ────────────────────────────────── */
+:root {
+  --bg: #fafaf8;
+  --bg-alt: #f5f4f0;
+  --border: #e8e7e2;
+  --border-mid: #c8c7c2;
+  --text: #0a0a0a;
+  --text-mid: #2e2d2a;
+  --text-muted: #6b6a65;
+  --text-dim: #b0afa8;
+  --inv-bg: #0a0a0a;
+  --inv-text: #fafaf8;
+  --inv-dim: rgba(255,255,255,0.65);
+  --inv-border: rgba(255,255,255,0.08);
+  --nav-bg: rgba(250,250,248,0.9);
+  --skill-hover: #f5f4f0;
+  --tag-bg: #fafaf8;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Instrument Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  /* Welcome screen surface — inverted from the main bg */
+  --ws-bg: #0f0f0e;
+  --ws-text: #f0efe8;
+}
+
+/* ─── Dark Theme Overrides ─────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg: #111110;
+  --bg-alt: #1a1a18;
+  --border: #2a2a28;
+  --border-mid: #3a3a38;
+  --text: #f0efe8;
+  --text-mid: #c8c7c0;
+  --text-muted: #888780;
+  --text-dim: #555450;
+  --inv-bg: #f0efe8;
+  --inv-text: #111110;
+  --inv-dim: rgba(0,0,0,0.6);
+  --inv-border: rgba(0,0,0,0.12);
+  --nav-bg: rgba(17,17,16,0.95);
+  --skill-hover: #222220;
+  --tag-bg: #1a1a18;
+  /* Welcome screen surface — light surface in dark mode for contrast reversal */
+  --ws-bg: #f5f4f0;
+  --ws-text: #111110;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+/* Hides the native scrollbar while keeping scroll functionality */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+  transition: background 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ─── Custom Cursor ─────────────────────────────────────────────────────────
+   Dot and ring use CSS custom properties (--cx/--cy, --rx/--ry) updated by JS
+   via RAF loop — keeps cursor movement on the compositor thread.
+   mix-blend-mode: difference inverts colors beneath for visibility on any bg.
+   Fades in on load alongside .hero-right. Uses animation-fill-mode: backwards
+   so the resting opacity stays the declared value and the edge-fade class can
+   still override it at runtime (forwards would lock opacity:1 and break that). */
+@keyframes cursorIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  transform: translate(calc(var(--cx, 0px) - 50%), calc(var(--cy, 0px) - 50%));
+  mix-blend-mode: difference;
+  animation: cursorIn 1.4s 0.35s cubic-bezier(0.4,0,0.2,1) backwards;
+  animation-play-state: paused;
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.4s ease;
+}
+body.hero-ready .cursor {
+  animation-play-state: running;
+}
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  transform: translate(calc(var(--rx, 0px) - 50%), calc(var(--ry, 0px) - 50%));
+  mix-blend-mode: difference;
+  animation: cursorIn 1.4s 0.35s cubic-bezier(0.4,0,0.2,1) backwards;
+  animation-play-state: paused;
+  transition: width 0.35s cubic-bezier(0.22,1,0.36,1), height 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+}
+body.hero-ready .cursor-ring {
+  animation-play-state: running;
+}
+.cursor.is-hovering {
+  width: 14px;
+  height: 14px;
+}
+.cursor-ring.is-hovering {
+  width: 52px;
+  height: 52px;
+}
+.cursor.edge-fade,
+.cursor-ring.edge-fade {
+  opacity: 0;
+}
+
+/* ─── Navigation ────────────────────────────────────────────────────────────
+   Fixed bar with frosted-glass backdrop. Border appears on scroll (.scrolled).
+   Horizontal padding uses max() to centre-clamp on ultra-wide viewports. */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem max(4rem, calc((100% - 1500px) / 2 + 4rem));
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.4s cubic-bezier(0.4,0,0.2,1), background 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+nav.scrolled {
+  border-bottom-color: var(--border);
+}
+/* Thin reading-progress bar that grows with scroll position (width set by JS) */
+.scroll-progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--text);
+  transition: width 0.05s linear;
+  z-index: 201;
+}
+.nav-logo {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  isolation: isolate;
+  position: relative;
+}
+/* ::before/::after duplicate the logo text via data-text for the glitch effect */
+.nav-logo::before,
+.nav-logo::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  clip-path: inset(0 0 100% 0);
+  pointer-events: none;
+}
+.nav-logo::before {
+  animation: glitchTop 6s infinite;
+  animation-timing-function: steps(1, end);
+}
+.nav-logo::after {
+  animation: glitchBot 6s infinite;
+  animation-timing-function: steps(1, end);
+  animation-delay: 0.3s;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* ─── Theme Toggle ──────────────────────────────────────────────────────────── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-mid);
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 6px 14px;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  transition: border-color 0.25s cubic-bezier(0.4,0,0.2,1), color 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.theme-toggle:hover {
+  border-color: var(--text-mid);
+  color: var(--text);
+}
+
+/* ─── Fullscreen Button ─────────────────────────────────────────────────────
+   Two SVG icons (expand / compress) swap visibility via .is-fullscreen toggle.
+   The ::after pseudo-element renders a tooltip on hover. */
+.fullscreen-btn {
+  background: none;
+  border: 1px solid var(--border-mid);
+  border-radius: 20px;
+  width: 36px;
+  height: 32px;
+  padding: 0;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: border-color 0.25s cubic-bezier(0.4,0,0.2,1), color 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.fullscreen-btn:hover {
+  border-color: var(--text-mid);
+  color: var(--text);
+}
+.fullscreen-btn:active {
+  transform: scale(0.92);
+}
+.fs-icon-expand,
+.fs-icon-compress {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transition: opacity 0.22s ease, transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+.fs-icon-expand {
+  opacity: 1;
+  transform: scale(1);
+}
+.fs-icon-compress {
+  opacity: 0;
+  transform: scale(0.5) rotate(45deg);
+}
+.fullscreen-btn.is-fullscreen .fs-icon-expand {
+  opacity: 0;
+  transform: scale(0.5) rotate(-45deg);
+}
+.fullscreen-btn.is-fullscreen .fs-icon-compress {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.fullscreen-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--inv-bg);
+  color: var(--inv-text);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 300;
+}
+.fullscreen-btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+/* Covers the page during fullscreen transitions to prevent layout flash */
+#fs-transition-veil {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 9000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0s;
+}
+#fs-transition-veil.veil-in {
+  opacity: 1;
+  transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#fs-transition-veil.veil-out {
+  opacity: 0;
+  transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1) 0.08s;
+}
+.toggle-icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.icon-sun {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+}
+.icon-moon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 1px;
+  left: 1px;
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+}
+/* Sun visible in light mode, hidden in dark; moon is the inverse */
+.icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+.icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+[data-theme="dark"] .icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+[data-theme="dark"] .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* ─── Hamburger & Mobile Menu ───────────────────────────────────────────────
+   Hidden on desktop (display:none). CSS-only three-bar → X animation driven
+   by a hidden checkbox (#menuCheckbox); JS adds .open to .mobile-menu for
+   the fade-in and staggered link entrance. */
+.hamburger-wrap {
+  display: none;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: none;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger .toggle {
+  position: relative;
+  width: 26px;
+  cursor: none;
+  display: block;
+  /* Height = 3 bars × 1.5px + 2 gaps × 7px = 18.5px */
+  height: calc(1.5px * 3 + 7px * 2);
+}
+.hamburger .bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--text);
+  opacity: 1;
+  transform-origin: center;
+  transition: none 0.35s cubic-bezier(.5, -0.35, .35, 1.5) 0s;
+}
+.hamburger .bar--top {
+  top: 0;
+  transition-property: top, transform;
+  transition-delay: calc(0.35s), 0s;
+}
+.hamburger .bar--middle {
+  top: 8.5px;
+  transition-property: opacity;
+  transition-duration: 0.1s;
+  transition-delay: calc(0.35s * 1.3);
+}
+.hamburger .bar--bottom {
+  top: 17px;
+  transition-property: top, transform;
+  transition-delay: 0s, 0s;
+}
+#menuCheckbox:checked ~ .hamburger .toggle .bar--top {
+  top: 8.25px;
+  transform: rotate(45deg);
+  transition-delay: calc(0.35s * .3), calc(0.35s * 1.3);
+}
+#menuCheckbox:checked ~ .hamburger .toggle .bar--middle {
+  opacity: 0;
+  transition-duration: 0.1s;
+  transition-delay: 0s;
+}
+#menuCheckbox:checked ~ .hamburger .toggle .bar--bottom {
+  top: 8.25px;
+  transform: rotate(-45deg);
+  transition-delay: calc(0.35s * .3), calc(0.35s * 1.3);
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: var(--bg);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 300;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: color 0.25s cubic-bezier(0.4,0,0.2,1),
+              opacity 0.4s cubic-bezier(0.22,1,0.36,1),
+              transform 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.mobile-menu.open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-menu.open a:nth-child(1) { transition-delay: 0.07s; }
+.mobile-menu.open a:nth-child(2) { transition-delay: 0.13s; }
+.mobile-menu.open a:nth-child(3) { transition-delay: 0.19s; }
+.mobile-menu.open a:nth-child(4) { transition-delay: 0.25s; }
+.mobile-menu.open a:nth-child(5) { transition-delay: 0.31s; }
+.mobile-menu a:hover {
+  color: var(--text-muted);
+}
+.mobile-menu-footer {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+/* ─── Hero ──────────────────────────────────────────────────────────────────
+   Full-viewport two-column layout. Right column (orbit graphic) is hidden on
+   tablet/mobile. Left content fades up on load via CSS animation. */
+.hero {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem max(4rem, calc((100vw - 1500px) / 2 + 4rem)) 0;
+  align-items: center;
+  gap: 4rem;
+  overflow: hidden;
+}
+.hero-left {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s 0.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-play-state: paused;
+}
+body.hero-ready .hero-left {
+  animation-play-state: running;
+}
+
+/* ─── Hero Tag (Typewriter) ─────────────────────────────────────────────────
+   The ::before pseudo-element animates a decorative line that slides in.
+   Text content is injected character-by-character by the typewriter JS. */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+.hero-tag::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: var(--text-dim);
+  flex-shrink: 0;
+  width: 0;
+  animation: slideBar 0.55s cubic-bezier(0.22,1,0.36,1) 1.0s forwards;
+  animation-play-state: paused;
+}
+body.hero-ready .hero-tag::before {
+  animation-play-state: running;
+}
+@keyframes slideBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24px;
+  }
+}
+.hero-tag-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+.hero-tag-cursor {
+  display: inline-block;
+  color: var(--text-dim);
+  font-weight: 300;
+  margin-left: 1px;
+  opacity: 1;
+}
+.hero-tag-cursor.blink {
+  animation: blinkCaret 0.53s step-end infinite;
+}
+.hero-tag-cursor.hidden {
+  opacity: 0;
+  animation: none;
+}
+@keyframes blinkCaret {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+.hero-name em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero-cta-wrap {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  cursor: none;
+}
+
+/* ─── Hero CTA (Slide-Fill Animation) ──────────────────────────────────────
+   Two pseudo-elements (horizontal + vertical bg rectangles) collapse on hover
+   to reveal the text/border, creating a wipe-in fill effect. */
+.hero-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border: 2px solid var(--text);
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background: var(--bg);
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+  transform: scaleY(1);
+}
+.hero-cta:hover::before {
+  transform: scaleY(0);
+}
+.hero-cta::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background: var(--bg);
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+  transition-delay: 0.35s;
+  transform: scaleX(1);
+}
+.hero-cta:hover::after {
+  transform: scaleX(0);
+}
+.hero-cta span {
+  position: relative;
+  z-index: 3;
+}
+.hero-cta svg {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.hero-cta:hover svg {
+  transform: translateX(4px);
+}
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  padding: 1rem 0.25rem;
+  text-decoration: none;
+  border: none;
+  transition: color 0.25s ease;
+  position: relative;
+}
+.hero-cta-secondary .cta-label {
+  display: inline-block;
+  position: relative;
+}
+.hero-cta-secondary .cta-label::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--text);
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hero-cta-secondary:hover {
+  color: var(--text);
+}
+.hero-cta-secondary:hover .cta-label::after {
+  width: 100%;
+}
+.hero-cta-secondary .cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              color 0.25s ease;
+}
+.hero-cta-secondary:hover .cta-arrow {
+  transform: translate(3px, -3px);
+}
+.hero-right {
+  opacity: 0;
+  animation: fadeIn 1.4s 0.35s cubic-bezier(0.4,0,0.2,1) forwards;
+  animation-play-state: paused;
+  position: relative;
+  height: 70vh;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.hero-ready .hero-right {
+  animation-play-state: running;
+}
+.hero-graphic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ─── Hero Orbit Graphic ────────────────────────────────────────────────────
+   Three concentric circles (circle-1 spins CW, circle-2 CCW, circle-3 static).
+   Orbit dots sit at the top of each rotating circle to trace the orbit path. */
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: spinSlow 30s linear infinite;
+}
+.circle-2 {
+  width: 280px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: spinSlow 20s linear infinite reverse;
+}
+.circle-3 {
+  width: 160px;
+  height: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1.5px solid var(--text-mid);
+}
+.orbit-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--text);
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.orbit-dot-sm {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--text-dim);
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ─── Code Chips ────────────────────────────────────────────────────────────
+   Floating mono snippets positioned absolutely around the orbit graphic.
+   Each has a glitch effect via ::before/::after using data-text, with
+   staggered animation delays so they glitch at different times. */
+.hero-code-snippets {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.code-chip {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-muted);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  animation: float 6s ease-in-out infinite;
+}
+.code-chip:nth-child(1) {
+  top: 15%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.code-chip:nth-child(2) {
+  top: 20%;
+  right: 5%;
+  animation-delay: 1.5s;
+}
+.code-chip:nth-child(3) {
+  bottom: 15%;
+  left: 3%;
+  animation-delay: 3s;
+}
+.code-chip:nth-child(4) {
+  bottom: 20%;
+  right: 5%;
+  animation-delay: 4.5s;
+}
+.code-chip:nth-child(5) {
+  top: 50%;
+  left: -2%;
+  animation-delay: 2s;
+}
+.chip-inner {
+  position: relative;
+  display: inline-block;
+}
+.chip-inner::before,
+.chip-inner::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  clip-path: inset(0 0 100% 0);
+  pointer-events: none;
+}
+.chip-inner::before {
+  animation: glitchTopChip 7s steps(1,end) infinite;
+}
+.chip-inner::after {
+  animation: glitchBotChip 7s steps(1,end) infinite;
+  animation-delay: 0.15s;
+}
+.code-chip:nth-child(1) .chip-inner::before { animation-delay: 0s; }
+.code-chip:nth-child(2) .chip-inner::before { animation-delay: 1.4s; }
+.code-chip:nth-child(3) .chip-inner::before { animation-delay: 2.8s; }
+.code-chip:nth-child(4) .chip-inner::before { animation-delay: 4.2s; }
+.code-chip:nth-child(5) .chip-inner::before { animation-delay: 5.6s; }
+.code-chip:nth-child(1) .chip-inner::after { animation-delay: 0.15s; }
+.code-chip:nth-child(2) .chip-inner::after { animation-delay: 1.55s; }
+.code-chip:nth-child(3) .chip-inner::after { animation-delay: 2.95s; }
+.code-chip:nth-child(4) .chip-inner::after { animation-delay: 4.35s; }
+.code-chip:nth-child(5) .chip-inner::after { animation-delay: 5.75s; }
+/* Glitch fires at 80–90% of the cycle; clip-path slices reveal displaced copies */
+@keyframes glitchTopChip {
+  0%, 79% {
+    clip-path: inset(0 0 100% 0);
+    transform: none;
+    opacity: 0;
+  }
+  80% {
+    clip-path: inset(0 0 60% 0);
+    transform: translate(-1px, -1px);
+    opacity: 1;
+    filter: brightness(1.15);
+  }
+  82% {
+    clip-path: inset(30% 0 40% 0);
+    transform: translate(1px, 0px);
+    opacity: 1;
+  }
+  84% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(-1px, 1px);
+    opacity: 1;
+    filter: brightness(0.85);
+  }
+  86% {
+    clip-path: inset(0 0 100% 0);
+    transform: none;
+    opacity: 0;
+  }
+  88% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(2px, -1px);
+    opacity: 1;
+  }
+  90%, 100% {
+    clip-path: inset(0 0 100% 0);
+    transform: none;
+    opacity: 0;
+  }
+}
+@keyframes glitchBotChip {
+  0%, 81% {
+    clip-path: inset(100% 0 0 0);
+    transform: none;
+    opacity: 0;
+  }
+  82% {
+    clip-path: inset(70% 0 0 0);
+    transform: translate(1px, 1px);
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+  84% {
+    clip-path: inset(40% 0 0 0);
+    transform: translate(-1px, 0px);
+    opacity: 1;
+  }
+  86% {
+    clip-path: inset(80% 0 0 0);
+    transform: translate(1px, -1px);
+    opacity: 1;
+    filter: brightness(0.88);
+  }
+  88%, 100% {
+    clip-path: inset(100% 0 0 0);
+    transform: none;
+    opacity: 0;
+  }
+}
+@keyframes glitchTop {
+  0%, 79% {
+    clip-path: inset(0 0 100% 0);
+    transform: none;
+    opacity: 0;
+  }
+  80% {
+    clip-path: inset(0 0 60% 0);
+    transform: translate(-2px, -1px);
+    opacity: 1;
+    filter: brightness(1.4);
+  }
+  82% {
+    clip-path: inset(30% 0 40% 0);
+    transform: translate(2px, 0px);
+    opacity: 1;
+  }
+  84% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(-1px, 1px);
+    opacity: 1;
+    filter: brightness(0.6);
+  }
+  86% {
+    clip-path: inset(0 0 100% 0);
+    transform: none;
+    opacity: 0;
+  }
+  88% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(3px, -1px);
+    opacity: 1;
+  }
+  90%, 100% {
+    clip-path: inset(0 0 100% 0);
+    transform: none;
+    opacity: 0;
+  }
+}
+@keyframes glitchBot {
+  0%, 81% {
+    clip-path: inset(100% 0 0 0);
+    transform: none;
+    opacity: 0;
+  }
+  82% {
+    clip-path: inset(70% 0 0 0);
+    transform: translate(2px, 1px);
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+  84% {
+    clip-path: inset(40% 0 0 0);
+    transform: translate(-2px, 0px);
+    opacity: 1;
+  }
+  86% {
+    clip-path: inset(80% 0 0 0);
+    transform: translate(1px, -1px);
+    opacity: 1;
+    filter: brightness(0.5);
+  }
+  88%, 100% {
+    clip-path: inset(100% 0 0 0);
+    transform: none;
+    opacity: 0;
+  }
+}
+
+/* ─── Sections ──────────────────────────────────────────────────────────────
+   Shared padding uses max() for responsive horizontal gutters that
+   cap the content width at 1500px on large screens. */
+section {
+  padding: 7rem max(4rem, calc((100vw - 1500px) / 2 + 4rem));
+}
+.about {
+  background: var(--bg);
+  padding-top: 2rem;
+  scroll-margin-top: 5rem;
+}
+/* Flex row: [decorative line] [section title] [01/02...] — line fills the gap */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  min-width: 28px;
+  order: 1;
+  text-align: right;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text);
+}
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 4px;
+  order: 0;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 1.5rem;
+}
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+.about-text strong {
+  font-weight: 600;
+  color: var(--text);
+}
+.about-sidebar {
+  padding-top: 0.5rem;
+}
+.sidebar-item {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+.sidebar-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+.sidebar-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* ─── Skills ────────────────────────────────────────────────────────────────
+   3-column CSS grid separated by 1px gap on a border-coloured container —
+   creates a hairline grid-line effect between cards without actual borders.
+   The last (AI) card spans all columns via .skill-card--full. */
+.skills {
+  background: var(--bg-alt);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.skill-card {
+  background: var(--bg);
+  padding: 2.5rem;
+  transition: background 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  overflow: hidden;
+}
+.skill-card:hover {
+  background: var(--skill-hover);
+  transform: translateY(-2px);
+}
+/* Bottom border animates from 0 to full width on hover */
+.skill-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--text);
+  transition: width 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.skill-card:hover::after {
+  width: 100%;
+}
+.skill-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  display: block;
+  color: var(--text-muted);
+  line-height: 1;
+}
+.skill-icon svg {
+  display: block;
+  stroke: currentColor;
+}
+.skill-category {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+}
+.skill-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--tag-bg);
+  transition: border-color 0.25s cubic-bezier(0.4,0,0.2,1), color 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.skill-card:hover .tag {
+  border-color: var(--border-mid);
+  color: var(--text);
+}
+
+/* ─── Projects ──────────────────────────────────────────────────────────────
+   Each project is a grid row: [num] [info] [tags] [arrow]. The arrow fades in
+   and the entire row shifts right on hover for a tactile "tap" feel. */
+.projects {
+  background: var(--bg);
+}
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+.project-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto 32px;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: padding-left 0.35s cubic-bezier(0.22,1,0.36,1);
+  cursor: none;
+  outline: none;
+}
+.project-item:focus-visible {
+  outline: 2px solid var(--text-mid);
+  outline-offset: 4px;
+}
+.project-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.project-item:hover {
+  padding-left: 1.5rem;
+}
+.project-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+.project-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+.project-item:hover .project-name {
+  color: var(--text-muted);
+}
+.project-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.project-tags-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.project-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+.project-arrow svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.project-item:hover .project-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─── Contact ───────────────────────────────────────────────────────────────
+   Inverted colour scheme (dark background in both themes) using --inv-* tokens
+   so it visually separates from the main content above. */
+.contact {
+  background: var(--inv-bg);
+  color: var(--inv-text);
+  padding-bottom: 3rem;
+}
+.contact .section-title {
+  color: var(--inv-text);
+}
+.contact .section-line {
+  background: var(--inv-border);
+}
+.contact .section-num {
+  color: var(--inv-dim);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.contact-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--inv-text);
+  margin-bottom: 1.5rem;
+}
+.contact-headline em {
+  font-style: italic;
+  color: var(--text-dim);
+}
+.contact-sub {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  max-width: 380px;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--inv-border);
+  text-decoration: none;
+  transition: padding-right 0.35s cubic-bezier(0.22,1,0.36,1);
+  color: var(--inv-text);
+  cursor: none;
+}
+.contact-link:last-child {
+  border-bottom: 1px solid var(--inv-border);
+}
+.contact-link:hover {
+  padding-right: 1rem;
+}
+.contact-link-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--inv-dim);
+  margin-bottom: 4px;
+}
+.contact-link-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--inv-text);
+  transition: opacity 0.2s ease;
+}
+.contact-link:hover .contact-link-value {
+  opacity: 0.6;
+}
+.contact-link-arrow {
+  opacity: 0.3;
+  transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  display: flex;
+  align-items: center;
+}
+.contact-link-arrow svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.contact-link:hover .contact-link-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* ─── Footer ────────────────────────────────────────────────────────────────
+   Continues the inverted palette from the contact section.
+   Two copyright variants: .footer-copy-wide (desktop) and .footer-copy-narrow
+   (mobile) toggle visibility via responsive breakpoints below. */
+footer {
+  background: var(--inv-bg);
+  padding: 2rem max(4rem, calc((100vw - 1500px) / 2 + 4rem));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--inv-border);
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--inv-dim);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.footer-copy-wide {
+  display: inline;
+}
+.footer-copy-narrow {
+  display: none;
+}
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--inv-dim);
+  background: none;
+  border: 1px solid var(--inv-border);
+  border-radius: 20px;
+  padding: 7px 16px;
+  cursor: none;
+  transition: color 0.25s cubic-bezier(0.4,0,0.2,1), border-color 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.btn-top:hover {
+  color: var(--inv-text);
+}
+.btn-top svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+.btn-top:hover svg {
+  transform: translateY(-3px);
+}
+.btn-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--inv-dim);
+  background: none;
+  border: 1px solid var(--inv-border);
+  border-radius: 20px;
+  padding: 7px 16px;
+  cursor: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.btn-share:hover {
+  color: var(--inv-text);
+}
+.btn-share svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ─── Share Dialog ──────────────────────────────────────────────────────────
+   Hidden by default (display:none); .is-open switches it to display:flex
+   with a backdrop blur overlay. Uses native Web Share API when available;
+   falls back to this custom dialog. */
+.share-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+}
+.share-overlay.is-open {
+  display: flex;
+  animation: fadeIn 0.2s ease;
+}
+.share-dialog {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 95%;
+  max-width: 420px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+  animation: dialogIn 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.share-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+.share-dialog-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text);
+}
+.share-close {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: none;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.share-close:hover {
+  color: var(--text);
+  background: var(--bg-alt);
+}
+.share-close svg {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.share-targets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.share-target {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  background: var(--bg);
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  cursor: none;
+}
+.share-target:hover {
+  border-color: var(--border-mid);
+  background: var(--bg-alt);
+  color: var(--text);
+}
+.share-target svg {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+}
+.share-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.share-url {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.btn-copy {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-muted);
+  cursor: none;
+  transition: border-color 0.25s cubic-bezier(0.4,0,0.2,1), color 0.25s cubic-bezier(0.4,0,0.2,1);
+  white-space: nowrap;
+}
+.btn-copy:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+/* Turns green briefly after a successful clipboard write */
+.btn-copy.copied {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+/* ─── Scroll Reveal ─────────────────────────────────────────────────────────
+   Elements start invisible/shifted; IntersectionObserver in JS adds .visible
+   to trigger the transition. Delay variants stagger sibling elements. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes spinSlow {
+  to {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ─── Reduced Motion ────────────────────────────────────────────────────────
+   Respects the OS-level accessibility preference. Collapses all durations
+   and reveals hidden elements immediately. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-left {
+    opacity: 1;
+    transform: none;
+    animation-play-state: running !important;
+  }
+  .hero-right {
+    opacity: 1;
+    animation-play-state: running !important;
+  }
+  .cursor, .cursor-ring {
+    animation-play-state: running !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ─── Tablet (≤1024px) ──────────────────────────────────────────────────────
+   Hides the custom cursor and orbit graphic, collapses hero to single column,
+   and stacks the skills grid. Pauses heavy animations for battery saving. */
+@media (max-width: 1024px) {
+  body, * {
+    cursor: auto !important;
+  }
+  .cursor, .cursor-ring {
+    display: none;
+  }
+  nav {
+    padding: 1.25rem 1.5rem;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-right {
+    display: none;
+  }
+  .circle-1, .circle-2, .code-chip,
+  .chip-inner::before, .chip-inner::after {
+    animation-play-state: paused;
+  }
+  section {
+    padding: 5rem 2.5rem;
+  }
+  .about {
+    padding-top: 1.5rem;
+  }
+  .about-grid {
+    gap: 3rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-tags-list {
+    display: none;
+  }
+  .contact {
+    padding-bottom: 2rem;
+  }
+  .contact-grid {
+    gap: 3rem;
+  }
+}
+
+/* ─── Mobile (≤768px) ───────────────────────────────────────────────────────
+   Swaps desktop nav links for the hamburger menu, collapses multi-column
+   grids to single column, and switches to the narrow footer copy. */
+@media (max-width: 768px) {
+  .nav-right {
+    gap: 0.75rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hamburger-wrap {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  section, .hero {
+    padding: 5rem 1.5rem;
+  }
+  .about {
+    padding-top: 1.5rem;
+  }
+  .about-grid, .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .project-item {
+    grid-template-columns: 36px 1fr 24px;
+    gap: 1rem;
+  }
+  .project-item .project-tags-list {
+    display: none;
+  }
+  .project-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+  .contact {
+    padding-bottom: 1rem;
+  }
+  #thanksLine {
+    text-align: center;
+  }
+  .line-breaker {
+    display: block;
+    margin-top: 0.6rem;
+  }
+  footer {
+    padding: 1.25rem 1.25rem;
+    gap: 0.75rem;
+  }
+  .footer-copy-wide {
+    display: none;
+  }
+  .footer-copy-narrow {
+    display: inline;
+  }
+}
+/* Span full grid width — used by the AI skill card and contact outro block */
+.skill-card--full {
+  grid-column: 1 / -1;
+}
+.contact-full {
+  grid-column: 1 / -1;
+}
+
+/* ─── Welcome Screen ────────────────────────────────────────────────────────
+   Full-viewport overlay with a two-phase animation:
+   (1) Content fades/slides in staggered on load.
+   (2) On dismiss, overlay collapses upward via clip-path, then display:none. */
+
+/* Phase 1 — content entrance */
+@keyframes wsSlideUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes wsLineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+/* Phase 2 — overlay exit */
+@keyframes wsRevealOut {
+  from { clip-path: inset(0 0 0 0);   }
+  to   { clip-path: inset(0 0 100% 0); }
+}
+
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 8000;
+  background: var(--ws-bg);
+  color: var(--ws-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  /* Restore the native cursor — body sets cursor:none for the custom cursor,
+     but the custom cursor is invisible on the welcome screen so we undo it. */
+  cursor: auto;
+  /* Clip-path is manipulated by the exit animation; start fully open */
+  clip-path: inset(0 0 0 0);
+  transition: background 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.welcome-screen.ws-exit {
+  animation: wsRevealOut 0.72s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  pointer-events: none;
+}
+.welcome-screen.ws-done {
+  display: none;
+}
+
+/* ── Inner layout ── */
+.ws-inner {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Top monospace label ── */
+.ws-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ws-text) 35%, transparent);
+  opacity: 0;
+  animation: wsSlideUp 0.6s 0.1s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* ── Name / heading ── */
+.ws-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  animation: wsSlideUp 0.7s 0.22s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+.ws-heading em {
+  font-style: italic;
+}
+
+/* ── Divider ── */
+.ws-divider {
+  height: 1px;
+  background: color-mix(in srgb, var(--ws-text) 12%, transparent);
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: wsLineGrow 0.55s 0.42s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* ── Sub-text ── */
+.ws-sub {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--ws-text) 50%, transparent);
+  opacity: 0;
+  animation: wsSlideUp 0.65s 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* ── Keyboard shortcuts grid (desktop-only, injected by JS) ── */
+.ws-shortcuts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  opacity: 0;
+  animation: wsSlideUp 0.65s 0.62s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+.ws-shortcut-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.ws-shortcut-col-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ws-text) 20%, transparent);
+  margin-bottom: 0.25rem;
+}
+.ws-shortcut-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ws-shortcut-row span {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--ws-text) 38%, transparent);
+  flex: 1;
+}
+.ws-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  padding: 3px 7px;
+  border: 1px solid color-mix(in srgb, var(--ws-text) 18%, transparent);
+  border-radius: 4px;
+  color: color-mix(in srgb, var(--ws-text) 60%, transparent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Enter button row (button + inline hint) ── */
+.ws-enter-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  opacity: 0;
+  animation: wsSlideUp 0.65s 0.75s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+.ws-enter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border: 1.5px solid color-mix(in srgb, var(--ws-text) 55%, transparent);
+  background: transparent;
+  color: color-mix(in srgb, var(--ws-text) 90%, transparent);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: color 0.35s ease, border-color 0.35s ease;
+}
+/* Fill wipe — same slide mechanic as hero CTA, adapted for inverted surface */
+.ws-enter-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--ws-text) 10%, transparent);
+  transform: translateX(-105%);
+  transition: transform 0.4s cubic-bezier(0.76,0,0.24,1);
+}
+.ws-enter-btn:hover::before {
+  transform: translateX(0);
+}
+.ws-enter-btn svg {
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  flex-shrink: 0;
+}
+.ws-enter-btn:hover svg {
+  transform: translateX(5px);
+}
+/* Hint text — sits inline to the right of the Enter button */
+.ws-hint {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: color-mix(in srgb, var(--ws-text) 22%, transparent);
+}
+.ws-hint.ws-hint--hidden {
+  visibility: hidden;
+}
+
+/* ── Reduced-motion: skip animations, still show screen ── */
+@media (prefers-reduced-motion: reduce) {
+  .ws-eyebrow,
+  .ws-heading,
+  .ws-sub,
+  .ws-shortcuts,
+  .ws-enter-row,
+  .ws-hint,
+  .ws-dns-row {
+    opacity: 1;
+    animation: none;
+  }
+  .ws-divider {
+    transform: scaleX(1);
+    animation: none;
+  }
+  .welcome-screen.ws-exit {
+    animation: none;
+    display: none;
+  }
+}
+
+/* ── Skip flag: hide overlay before first paint, no flash ── */
+.ws-skip .welcome-screen {
+  display: none;
+}
+
+/* ── "Do not show again" checkbox row ── */
+.ws-dns-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  opacity: 0;
+  animation: wsSlideUp 0.65s 0.88s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+.ws-dns-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid color-mix(in srgb, var(--ws-text) 30%, transparent);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.ws-dns-checkbox:checked {
+  background: color-mix(in srgb, var(--ws-text) 90%, transparent);
+  border-color: color-mix(in srgb, var(--ws-text) 90%, transparent);
+}
+.ws-dns-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ws-bg);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.5l2.2 2.2 3.8-4' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.5l2.2 2.2 3.8-4' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.ws-dns-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--ws-text) 30%, transparent);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+.ws-dns-row:hover .ws-dns-label,
+.ws-dns-checkbox:checked + .ws-dns-label {
+  color: color-mix(in srgb, var(--ws-text) 55%, transparent);
+}
+</style>
+</head>
+<body>
+
+<!-- ─── Welcome Screen ───────────────────────────────────────────────────────
+     Full-viewport intro overlay. JS populates .ws-shortcuts on desktop and
+     dismisses the overlay on button click or Enter key. -->
+<div class="welcome-screen" id="welcomeScreen" aria-modal="true" role="dialog" aria-label="Welcome">
+  <div class="ws-inner">
+    <span class="ws-eyebrow">Portfolio — SYA</span>
+    <h1 class="ws-heading">Samin Yeasar<br><em>Arabi</em></h1>
+    <div class="ws-divider"></div>
+    <p class="ws-sub">Full Stack Developer &amp; AI Engineer — building at the intersection of engineering &amp; intelligence.</p>
+    <!-- .ws-shortcuts injected here by JS on desktop -->
+    <div class="ws-enter-row">
+      <button class="ws-enter-btn" id="wsEnterBtn" aria-label="Enter portfolio">
+        Enter
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <span class="ws-hint" id="wsHint">Press Enter</span>
+    </div>
+    <div class="ws-dns-row">
+      <input type="checkbox" class="ws-dns-checkbox" id="wsDnsCheck" aria-label="Do not show this screen again" />
+      <label class="ws-dns-label" for="wsDnsCheck">DO NOT SHOW AGAIN</label>
+    </div>
+  </div>
+</div>
+
+<!-- Custom cursor: dot (#cursor) + trailing ring (#cursor-ring), hidden on touch devices -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<!-- Full-page veil shown briefly during fullscreen enter/exit to mask layout reflow -->
+<div id="fs-transition-veil" aria-hidden="true"></div>
+
+<!-- ─── Mobile Menu ──────────────────────────────────────────────────────────
+     Full-screen overlay nav; JS adds/removes .open. Links stagger in via CSS.
+     Footer slots populated by JS with location/time metadata. -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <div class="mobile-menu-footer">
+    <span id="mobileMenuLeft"></span>
+    <span id="mobileMenuRight"></span>
+  </div>
+</div>
+
+<!-- ─── Navigation Bar ───────────────────────────────────────────────────────
+     Scroll progress bar width is driven by JS. nav-logo uses data-text for
+     the CSS glitch pseudoelement. Hamburger is visible only on mobile. -->
+<nav id="navbar">
+  <!-- Width updated on scroll by JS to show reading progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a href="#" class="nav-logo" id="navLogo" data-text="">SYA</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- Sun/moon SVGs swap visibility; toggleLabel text flips between "Dark"/"Light" -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="toggle-icon" id="toggleIcon">
+
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2"  x2="12" y2="5"/>
+          <line x1="12" y1="19" x2="12" y2="22"/>
+          <line x1="4.22" y1="4.22"  x2="6.34"  y2="6.34"/>
+          <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+          <line x1="2"  y1="12" x2="5"  y2="12"/>
+          <line x1="19" y1="12" x2="22" y2="12"/>
+          <line x1="4.22"  y1="19.78" x2="6.34"  y2="17.66"/>
+          <line x1="17.66" y1="6.34"  x2="19.78" y2="4.22"/>
+        </svg>
+
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </span>
+      <span id="toggleLabel">Dark</span>
+    </button>
+
+    <!-- Expand/compress icons toggle via .is-fullscreen; data-tooltip drives the CSS tooltip -->
+    <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle fullscreen" data-tooltip="Fullscreen">
+
+      <svg class="fs-icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3"/>
+        <path d="M21 8V5a2 2 0 0 0-2-2h-3"/>
+        <path d="M3 16v3a2 2 0 0 0 2 2h3"/>
+        <path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
+      </svg>
+
+      <svg class="fs-icon-compress" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M8 3v3a2 2 0 0 1-2 2H3"/>
+        <path d="M21 8h-3a2 2 0 0 1-2-2V3"/>
+        <path d="M3 16h3a2 2 0 0 1 2 2v3"/>
+        <path d="M16 21v-3a2 2 0 0 1 2-2h3"/>
+      </svg>
+    </button>
+    <!-- Hidden checkbox powers the CSS bar→X animation; button handles aria state -->
+    <div class="hamburger-wrap">
+      <input id="menuCheckbox" type="checkbox" hidden>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="toggle" aria-hidden="true">
+          <div class="bar bar--top"></div>
+          <div class="bar bar--middle"></div>
+          <div class="bar bar--bottom"></div>
+        </span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Skip-link target and main landmark for screen readers -->
+<main id="main-content">
+<!-- ─── Hero ──────────────────────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <!-- Typewriter text target; JS writes into hero-tag-text, cursor blinks via CSS -->
+    <div class="hero-tag">
+      <span class="hero-tag-text"></span><span class="hero-tag-cursor">_</span>
+    </div>
+    <h1 class="hero-name">
+      Samin Yeasar<br>
+      <em>Arabi</em>
+    </h1>
+    <p class="hero-tagline">Building products at the intersection of engineering &amp; intelligence.</p>
+    <!-- Primary CTA uses slide-fill animation; secondary is a plain underline link -->
+    <div class="hero-cta-group">
+      <button class="hero-cta-wrap">
+        <a href="#projects" class="hero-cta">
+          <span>View Work</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </button>
+      <a href="cv.pdf" download="Samin_Yeasar_Arabi_CV.pdf" class="hero-cta-secondary">
+        <span class="cta-label">Download CV</span>
+        <svg class="cta-arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+          <path d="M3.5 11.5L11.5 3.5M11.5 3.5H5.5M11.5 3.5V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- Decorative orbit graphic: three concentric circles + floating code chips.
+       Hidden on tablet/mobile via CSS. -->
+  <div class="hero-right">
+    <div class="hero-graphic">
+      <!-- circle-1 spins CW, circle-2 CCW; orbit dots ride the rotating circumference -->
+      <div class="hero-circle circle-1"><div class="orbit-dot"></div></div>
+      <div class="hero-circle circle-2"><div class="orbit-dot-sm"></div></div>
+      <div class="hero-circle circle-3"></div>
+      <!-- data-text mirrors the visible text for the CSS glitch pseudoelement -->
+      <div class="hero-code-snippets">
+        <span class="code-chip"><span class="chip-inner" data-text="def train_model():">def train_model():</span></span>
+        <span class="code-chip"><span class="chip-inner" data-text="const App = () =&gt;">const App = () =&gt;</span></span>
+        <span class="code-chip"><span class="chip-inner" data-text="flutter build web">flutter build web</span></span>
+        <span class="code-chip"><span class="chip-inner" data-text="gcc -O3 main.cpp">gcc -O3 main.cpp</span></span>
+        <span class="code-chip"><span class="chip-inner" data-text="import torch as pt">import torch as pt</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── About ─────────────────────────────────────────────────────────────── -->
+<section class="about" id="about">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <h2 class="section-title">About</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal reveal-delay-1">
+      <p>I'm <strong>Samin Yeasar Arabi</strong>, a full stack developer and AI engineer with a passion for crafting seamless digital experiences — from pixel-perfect interfaces to intelligent backend systems.</p>
+      <p>My work spans the entire stack: designing interactive frontends with React and Next.js, building cross-platform apps with Flutter, and developing high-performance computational solutions in C++, Python, and Julia.</p>
+      <p>On the AI side, I engineer and fine-tune machine learning models, build LLM-powered pipelines, and integrate intelligent systems into real-world products. I care deeply about both the <strong>craft</strong> and the <strong>impact</strong> of what I build.</p>
+    </div>
+    <!-- Quick-facts sidebar: role, location, focus, availability -->
+    <div class="about-sidebar reveal reveal-delay-2">
+      <div class="sidebar-item">
+        <div class="sidebar-label">Role</div>
+        <div class="sidebar-value">Full Stack Developer & AI Engineer</div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-label">Based In</div>
+        <div class="sidebar-value">Dhaka, Bangladesh</div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-label">Focus</div>
+        <div class="sidebar-value">Web • Mobile • AI / ML Systems</div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-label">Status</div>
+        <div class="sidebar-value">Open to opportunities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Skills ────────────────────────────────────────────────────────────── -->
+<section class="skills" id="skills">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal reveal-delay-1">
+      <span class="skill-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <line x1="3" y1="9" x2="21" y2="9"/>
+          <line x1="9" y1="21" x2="9" y2="9"/>
+        </svg>
+      </span>
+      <div class="skill-category">Frontend</div>
+      <div class="skill-name">Web Interfaces</div>
+      <div class="skill-tags">
+        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Next.js</span>
+      </div>
+    </div>
+    <div class="skill-card reveal reveal-delay-2">
+      <span class="skill-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="7" y="2" width="10" height="20" rx="2"/>
+          <line x1="11" y1="18" x2="13" y2="18"/>
+        </svg>
+      </span>
+      <div class="skill-category">Mobile</div>
+      <div class="skill-name">Cross-Platform Apps</div>
+      <div class="skill-tags">
+        <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">iOS</span><span class="tag">Android</span>
+      </div>
+    </div>
+    <div class="skill-card reveal reveal-delay-3">
+      <span class="skill-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="7" y="7" width="10" height="10" rx="1"/>
+          <line x1="9"  y1="7"  x2="9"  y2="4"/>
+          <line x1="12" y1="7"  x2="12" y2="4"/>
+          <line x1="15" y1="7"  x2="15" y2="4"/>
+          <line x1="9"  y1="20" x2="9"  y2="17"/>
+          <line x1="12" y1="20" x2="12" y2="17"/>
+          <line x1="15" y1="20" x2="15" y2="17"/>
+          <line x1="7"  y1="9"  x2="4"  y2="9"/>
+          <line x1="7"  y1="12" x2="4"  y2="12"/>
+          <line x1="7"  y1="15" x2="4"  y2="15"/>
+          <line x1="20" y1="9"  x2="17" y2="9"/>
+          <line x1="20" y1="12" x2="17" y2="12"/>
+          <line x1="20" y1="15" x2="17" y2="15"/>
+        </svg>
+      </span>
+      <div class="skill-category">Systems</div>
+      <div class="skill-name">Low-Level & Scientific</div>
+      <div class="skill-tags">
+        <span class="tag">C++</span><span class="tag">Python</span><span class="tag">Julia</span><span class="tag">Performance</span>
+      </div>
+    </div>
+    <!-- AI card spans all 3 columns via .skill-card--full -->
+    <div class="skill-card reveal reveal-delay-1 skill-card--full">
+      <span class="skill-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="5"  r="2"/>
+          <circle cx="5"  cy="14" r="2"/>
+          <circle cx="19" cy="14" r="2"/>
+          <circle cx="12" cy="19" r="2"/>
+          <line x1="12" y1="7"   x2="5.7"  y2="12.3"/>
+          <line x1="12" y1="7"   x2="18.3" y2="12.3"/>
+          <line x1="6.7" y1="15.3" x2="11"  y2="17.3"/>
+          <line x1="17.3" y1="15.3" x2="13" y2="17.3"/>
+          <line x1="7"  y1="14"  x2="17"  y2="14"/>
+        </svg>
+      </span>
+      <div class="skill-category">AI / Machine Learning</div>
+      <div class="skill-name">Intelligent Systems Engineering</div>
+      <div class="skill-tags">
+        <span class="tag">LLMs</span><span class="tag">Model Fine-tuning</span><span class="tag">AI Pipelines</span><span class="tag">Neural Networks</span><span class="tag">Data Science</span><span class="tag">Python</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Projects ──────────────────────────────────────────────────────────── -->
+<section class="projects" id="projects">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-list reveal">
+    <a class="project-item" href="https://gadgetguide.pages.dev/" target="_blank" rel="noopener">
+      <div class="project-num">01</div>
+      <div class="project-info">
+        <div class="project-name">AI Inference Dashboard</div>
+        <div class="project-desc">Real-time LLM monitoring &amp; evaluation interface</div>
+      </div>
+      <div class="project-tags-list">
+        <span class="tag">Next.js</span><span class="tag">Python</span><span class="tag">AI</span>
+      </div>
+      <span class="project-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a class="project-item" href="https://arabi.pages.dev/" target="_blank" rel="noopener">
+      <div class="project-num">02</div>
+      <div class="project-info">
+        <div class="project-name">Cross-Platform Wallpaper App</div>
+        <div class="project-desc">Flutter application with dynamic wallpaper management</div>
+      </div>
+      <div class="project-tags-list">
+        <span class="tag">Flutter</span><span class="tag">Dart</span>
+      </div>
+      <span class="project-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a class="project-item" href="https://alieninquran.pages.dev/" target="_blank" rel="noopener">
+      <div class="project-num">03</div>
+      <div class="project-info">
+        <div class="project-name">High-Performance Compute Engine</div>
+        <div class="project-desc">Scientific computation library optimized for throughput</div>
+      </div>
+      <div class="project-tags-list">
+        <span class="tag">C++</span><span class="tag">Julia</span>
+      </div>
+      <span class="project-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a class="project-item" href="https://sidebar7.pages.dev/" target="_blank" rel="noopener">
+      <div class="project-num">04</div>
+      <div class="project-info">
+        <div class="project-name">LLM Fine-tuning Pipeline</div>
+        <div class="project-desc">End-to-end training &amp; evaluation framework for language models</div>
+      </div>
+      <div class="project-tags-list">
+        <span class="tag">Python</span><span class="tag">ML</span>
+      </div>
+      <span class="project-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a class="project-item" href="https://starworld.pages.dev/" target="_blank" rel="noopener">
+      <div class="project-num">05</div>
+      <div class="project-info">
+        <div class="project-name">Star World</div>
+        <div class="project-desc">An immersive interactive experience built for the web</div>
+      </div>
+      <div class="project-tags-list">
+        <span class="tag">JavaScript</span><span class="tag">Web</span>
+      </div>
+      <span class="project-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- ─── Contact ───────────────────────────────────────────────────────────── -->
+<section class="contact" id="contact">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="reveal reveal-delay-1">
+      <p class="contact-headline">Let's build something <em>remarkable</em> together.</p>
+      <p class="contact-sub">Whether you have a project in mind, a position to fill, or just want to connect — I'd love to hear from you.</p>
+    </div>
+    <div class="contact-links reveal reveal-delay-2">
+      <a href="mailto:arabi@email.com" class="contact-link">
+        <div><div class="contact-link-label">Email</div><div class="contact-link-value">arabi@email.com</div></div>
+        <span class="contact-link-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="https://github.com/" class="contact-link" target="_blank">
+        <div><div class="contact-link-label">GitHub</div><div class="contact-link-value">github.com/arabi</div></div>
+        <span class="contact-link-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="https://linkedin.com/" class="contact-link" target="_blank">
+        <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-value">linkedin.com/in/arabi</div></div>
+        <span class="contact-link-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="https://twitter.com/" class="contact-link" target="_blank">
+        <div><div class="contact-link-label">Twitter / X</div><div class="contact-link-value">@arabi</div></div>
+        <span class="contact-link-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+    <!-- Outro line spans full grid width (.contact-full); line-breaker splits on mobile -->
+    <div class="reveal reveal-delay-3 contact-full">
+      <p class="contact-headline" id="thanksLine">Thanks <em>for reading</em><span class="line-breaker"> ❤️</span></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ─── Share Dialog ──────────────────────────────────────────────────────────
+     Falls back to this modal when the Web Share API is unavailable (e.g. desktop).
+     Share link hrefs and shareUrl text are injected by JS on page load. -->
+<div class="share-overlay" id="shareOverlay" role="dialog" aria-modal="true" aria-labelledby="shareDialogTitle">
+  <div class="share-dialog">
+    <div class="share-dialog-header">
+      <h3 class="share-dialog-title" id="shareDialogTitle">Share this portfolio</h3>
+      <button class="share-close" id="shareClose" aria-label="Close share dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="share-targets">
+      <a class="share-target" id="shareTwitter" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#1da1f2"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.733-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Twitter / X
+      </a>
+      <a class="share-target" id="shareLinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#0077B5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a class="share-target" id="shareFacebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#3b5998"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Facebook
+      </a>
+      <a class="share-target" id="shareEmail" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+    </div>
+    <div class="share-copy-row">
+      <span class="share-url" id="shareUrl"></span>
+      <button class="btn-copy" id="btnCopy">Copy</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Footer ────────────────────────────────────────────────────────────────
+     Copyright text is written by JS (year + name). Wide/narrow variants switch
+     via CSS breakpoints. Share and Back-to-Top buttons live here. -->
+<footer>
+  <span class="footer-copy"><span class="footer-copy-wide" id="footerCopyWide"></span><span class="footer-copy-narrow" id="footerCopyNarrow"></span></span>
+  <div class="footer-actions">
+    <button class="btn-share" id="btnShare" title="Share this portfolio" aria-label="Share this portfolio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+      Share
+    </button>
+    <button class="btn-top" id="btnTop" title="Back to top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+      Top
+    </button>
+  </div>
+</footer>
+
+<script>
+
+// ─── Welcome Screen ───────────────────────────────────────────────────────────
+
+(function () {
+  var ws        = document.getElementById('welcomeScreen');
+  var btn       = document.getElementById('wsEnterBtn');
+  var hint      = document.getElementById('wsHint');
+  var dnsCheck  = document.getElementById('wsDnsCheck');
+  var inner     = ws.querySelector('.ws-inner');
+  var enterRow  = btn.closest('.ws-enter-row');
+  var isDesktop = window.matchMedia('(min-width: 1025px)');
+
+  // If the skip flag was set, the overlay is already hidden via CSS (.ws-skip).
+  // Unlock scroll and trigger hero immediately — no overlay logic needed.
+  if (document.documentElement.classList.contains('ws-skip')) {
+    document.body.style.overflow = '';
+    // Defer one frame so the DOM is fully ready before hero animations start.
+    requestAnimationFrame(function () {
+      if (typeof resetCursorForHeroEntry === 'function') resetCursorForHeroEntry();
+      document.body.classList.add('hero-ready');
+    });
+    return;
+  }
+
+  // Build keyboard shortcut grid: Shift column (left) + Alt column (right)
+  function buildShortcuts() {
+    var shiftShortcuts = [
+      { key: 'Shift+A', label: 'About'    },
+      { key: 'Shift+S', label: 'Skills'   },
+      { key: 'Shift+P', label: 'Projects' },
+      { key: 'Shift+C', label: 'Contact'  },
+    ];
+    var altShortcuts = [
+      { key: 'Alt+M',  label: 'Toggle theme' },
+      { key: 'Alt+F',  label: 'Fullscreen'   },
+      { key: 'Alt+S',  label: 'Share'        },
+      { key: 'Alt+T',  label: 'Top'          },
+    ];
+
+    function makeCol(shortcuts, colLabel) {
+      var col = document.createElement('div');
+      col.className = 'ws-shortcut-col';
+      var lbl = document.createElement('div');
+      lbl.className = 'ws-shortcut-col-label';
+      lbl.textContent = colLabel;
+      col.appendChild(lbl);
+      shortcuts.forEach(function (sc) {
+        var row = document.createElement('div');
+        row.className = 'ws-shortcut-row';
+        row.innerHTML = '<kbd class="ws-key">' + sc.key + '</kbd><span>' + sc.label + '</span>';
+        col.appendChild(row);
+      });
+      return col;
+    }
+
+    var grid = document.createElement('div');
+    grid.className = 'ws-shortcuts';
+    grid.appendChild(makeCol(shiftShortcuts, 'Navigate'));
+    grid.appendChild(makeCol(altShortcuts,   'Actions'));
+    // Insert before the Enter button row
+    inner.insertBefore(grid, enterRow);
+  }
+
+  if (isDesktop.matches) {
+    buildShortcuts();
+  } else {
+    hint.classList.add('ws-hint--hidden');
+  }
+
+  // Handle resizes that cross the breakpoint while overlay is still showing
+  isDesktop.addEventListener('change', function (e) {
+    var existing = inner.querySelector('.ws-shortcuts');
+    if (e.matches && !existing) {
+      buildShortcuts();
+      hint.classList.remove('ws-hint--hidden');
+    } else if (!e.matches && existing) {
+      existing.remove();
+      hint.classList.add('ws-hint--hidden');
+    }
+  });
+
+  function triggerHeroReady() {
+    // Reset cursor state before revealing the hero — discards any mouse
+    // movement that happened on the welcome screen and re-parks at hero centre.
+    if (typeof resetCursorForHeroEntry === 'function') resetCursorForHeroEntry();
+    // Adding the class starts all paused hero animations from t=0.
+    document.body.classList.add('hero-ready');
+  }
+
+  function dismiss() {
+    // Persist preference before any animation so a mid-dismiss refresh is safe.
+    if (dnsCheck && dnsCheck.checked) {
+      try { localStorage.setItem('sya-skip-welcome', '1'); } catch (_) {}
+    }
+    ws.classList.add('ws-exit');
+    document.removeEventListener('keydown', onKey);
+    ws.addEventListener('animationend', function () {
+      ws.classList.add('ws-done');
+      document.body.style.overflow = '';
+      triggerHeroReady();
+    }, { once: true });
+  }
+
+  function onKey(e) {
+    if (e.key === 'Enter') { e.preventDefault(); dismiss(); return; }
+    // Toggle theme while the welcome screen is visible. stopImmediatePropagation
+    // prevents the main keydown handler (registered later on the same document)
+    // from firing the same toggle and immediately reversing the change.
+    if (e.altKey && !e.ctrlKey && !e.metaKey && e.key === 'm') {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof applyTheme === 'function') {
+        var current = document.documentElement.getAttribute('data-theme');
+        applyTheme(current === 'dark' ? 'light' : 'dark');
+      }
+    }
+  }
+
+  btn.addEventListener('click', dismiss);
+  document.addEventListener('keydown', onKey);
+
+  // Lock scroll while welcome screen is showing
+  document.body.style.overflow = 'hidden';
+})();
+
+
+// ─── Typewriter ──────────────────────────────────────────────────────────────
+
+(function () {
+  var textEl   = document.querySelector('.hero-tag-text');
+  var cursorEl = document.querySelector('.hero-tag-cursor');
+  if (!textEl || !cursorEl) return;
+
+  var phases = [
+    { text: 'Full Stack Developer',               type: true  },
+    { text: 'Full Stack Developer',               type: false },
+    { text: 'AI Engineer',                        type: true  },
+    { text: 'AI Engineer',                        type: false },
+    { text: 'Full Stack Developer & AI Engineer', type: true  },
+  ];
+
+  var TYPE_SPEED         = 68;
+  var DELETE_SPEED       = 38;
+  var PAUSE_AFTER_TYPE   = 820;
+  var PAUSE_AFTER_DELETE = 260;
+  var BLINK_DURATION     = 2800;
+  var START_DELAY        = 1300;
+
+  var charIndex = 0;
+
+  function sleep(ms) {
+    return new Promise(function (r) { setTimeout(r, ms); });
+  }
+
+  async function run() {
+    await sleep(START_DELAY);
+
+    for (var i = 0; i < phases.length; i++) {
+      var phase = phases[i];
+
+      if (phase.type) {
+        while (charIndex < phase.text.length) {
+          charIndex++;
+          textEl.textContent = phase.text.slice(0, charIndex);
+          await sleep(TYPE_SPEED);
+        }
+        await sleep(PAUSE_AFTER_TYPE);
+      } else {
+        while (charIndex > 0) {
+          charIndex--;
+          textEl.textContent = phase.text.slice(0, charIndex);
+          await sleep(DELETE_SPEED);
+        }
+        await sleep(PAUSE_AFTER_DELETE);
+      }
+    }
+
+    cursorEl.classList.add('blink');
+    await sleep(BLINK_DURATION);
+    cursorEl.classList.remove('blink');
+    cursorEl.classList.add('hidden');
+  }
+
+  // Wait for hero-ready (set by welcome screen dismiss) before starting.
+  // If already set (e.g. reduced-motion skip), starts immediately.
+  function waitForHeroReady(cb) {
+    if (document.body.classList.contains('hero-ready')) { cb(); return; }
+    var obs = new MutationObserver(function () {
+      if (document.body.classList.contains('hero-ready')) {
+        obs.disconnect();
+        cb();
+      }
+    });
+    obs.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  waitForHeroReady(run);
+})();
+
+const root        = document.documentElement;
+const toggleBtn   = document.getElementById('themeToggle');
+const toggleIcon  = document.getElementById('toggleIcon');
+const toggleLabel = document.getElementById('toggleLabel');
+
+function applyTheme(theme) {
+  root.setAttribute('data-theme', theme);
+  toggleLabel.textContent = theme === 'dark' ? 'Light' : 'Dark';
+  localStorage.setItem('sya-theme', theme);
+}
+
+const saved      = localStorage.getItem('sya-theme');
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(saved || (systemDark ? 'dark' : 'light'));
+
+toggleBtn.addEventListener('click', () => {
+  applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
+
+// ─── Custom Cursor ───────────────────────────────────────────────────────────
+
+const cursorDot  = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursor-ring');
+const rootStyle  = document.documentElement.style;
+const EDGE       = 24;
+
+let mx = 0, my  = 0, rx = 0, ry = 0;
+let hasMoused      = false;
+// True while the welcome screen is visible — mousemove is ignored so the
+// cursor's parked hero-centre position can't be clobbered before entry.
+let wsActive       = !document.body.classList.contains('hero-ready');
+let rafPending     = false;
+let cursorRafId    = null;
+
+const desktopMQ = window.matchMedia('(min-width: 1025px)');
+
+function commitCursorPositions() {
+  rafPending = false;
+  rootStyle.setProperty('--cx', mx + 'px');
+  rootStyle.setProperty('--cy', my + 'px');
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  rootStyle.setProperty('--rx', rx + 'px');
+  rootStyle.setProperty('--ry', ry + 'px');
+  cursorRafId = requestAnimationFrame(commitCursorPositions);
+}
+
+function startCursorLoop() {
+  if (cursorRafId === null) {
+    cursorRafId = requestAnimationFrame(commitCursorPositions);
+  }
+}
+
+function stopCursorLoop() {
+  if (cursorRafId !== null) {
+    cancelAnimationFrame(cursorRafId);
+    cursorRafId = null;
+  }
+}
+
+if (desktopMQ.matches) startCursorLoop();
+desktopMQ.addEventListener('change', e => {
+  if (e.matches) {
+    startCursorLoop();
+    hasMoused = false;
+    parkAtHeroCenter();
+  } else {
+    stopCursorLoop();
+  }
+});
+
+function parkAtHeroCenter() {
+  requestAnimationFrame(() => {
+    const heroRight = document.querySelector('.hero-right');
+    if (!heroRight || heroRight.offsetParent === null) return;
+    const graphic = heroRight.querySelector('.hero-graphic');
+    if (!graphic) return;
+    const r  = graphic.getBoundingClientRect();
+    mx = r.left + r.width  / 2;
+    my = r.top  + r.height / 2;
+    rx = mx; ry = my;
+    cursorDot.classList.remove('edge-fade');
+    cursorRing.classList.remove('edge-fade');
+  });
+}
+
+// Called by the welcome screen on dismiss — resets cursor state so any mouse
+// movement during the overlay is discarded and the hero-centre park holds.
+function resetCursorForHeroEntry() {
+  wsActive  = false;
+  hasMoused = false;
+  parkAtHeroCenter();
+}
+
+parkAtHeroCenter();
+window.addEventListener('resize', () => { if (!hasMoused) parkAtHeroCenter(); });
+
+document.addEventListener('mousemove', e => {
+  // Discard movement while the welcome screen is covering the page — the
+  // custom cursor is invisible there and we must preserve the parked position.
+  if (wsActive) return;
+  hasMoused = true;
+  mx = e.clientX;
+  my = e.clientY;
+  const nearEdge = mx < EDGE || my < EDGE
+                || mx > window.innerWidth  - EDGE
+                || my > window.innerHeight - EDGE;
+  cursorDot.classList.toggle('edge-fade',  nearEdge);
+  cursorRing.classList.toggle('edge-fade', nearEdge);
+});
+
+document.addEventListener('mouseleave', () => {
+  cursorDot.classList.add('edge-fade');
+  cursorRing.classList.add('edge-fade');
+});
+
+document.addEventListener('mouseenter', () => {
+  cursorDot.classList.remove('edge-fade');
+  cursorRing.classList.remove('edge-fade');
+});
+
+(window.requestIdleCallback || setTimeout)(function attachHoverListeners() {
+  document.querySelectorAll('a, button, [data-hover]').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursorDot.classList.add('is-hovering');
+      cursorRing.classList.add('is-hovering');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursorDot.classList.remove('is-hovering');
+      cursorRing.classList.remove('is-hovering');
+    });
+  });
+});
+
+
+// ─── Scroll & Navbar ─────────────────────────────────────────────────────────
+
+const navbar         = document.getElementById('navbar');
+const scrollProgress = document.getElementById('scrollProgress');
+
+(window.requestIdleCallback || setTimeout)(function () {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    const scrollTop    = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    scrollProgress.style.width = (scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0) + '%';
+  }, { passive: true });
+});
+
+
+// ─── Reveal on Scroll ────────────────────────────────────────────────────────
+
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+
+// ─── Smooth Anchor Scroll ────────────────────────────────────────────────────
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+
+// ─── Scroll Lock ─────────────────────────────────────────────────────────────
+
+let _scrollLocks = 0;
+
+function lockScroll() {
+  if (++_scrollLocks === 1) document.body.style.overflow = 'hidden';
+}
+
+function unlockScroll() {
+  if (--_scrollLocks <= 0) {
+    _scrollLocks = 0;
+    document.body.style.overflow = '';
+  }
+}
+
+
+// ─── Mobile Menu ─────────────────────────────────────────────────────────────
+
+const hamburger    = document.getElementById('hamburger');
+const menuCheckbox = document.getElementById('menuCheckbox');
+const mobileMenu   = document.getElementById('mobileMenu');
+let menuOpen       = false;
+
+function openMobileMenu() {
+  if (menuOpen) return;
+  menuOpen = true;
+  menuCheckbox.checked = true;
+  mobileMenu.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'Close menu');
+  lockScroll();
+}
+
+function closeMobileMenu() {
+  if (!menuOpen) return;
+  menuOpen = false;
+  menuCheckbox.checked = false;
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open menu');
+  unlockScroll();
+}
+
+hamburger.addEventListener('click', () => menuOpen ? closeMobileMenu() : openMobileMenu());
+
+mobileMenu.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', () => closeMobileMenu());
+});
+
+
+// ─── Dynamic Year & Nav Logo ──────────────────────────────────────────────────
+
+(function () {
+  const yr       = new Date().getFullYear();
+  const wide     = document.getElementById('footerCopyWide');
+  const narrow   = document.getElementById('footerCopyNarrow');
+  const left     = document.getElementById('mobileMenuLeft');
+  const right    = document.getElementById('mobileMenuRight');
+  const logo     = document.getElementById('navLogo');
+  const logoText = `SYA \u2014 ${yr}`;
+
+  if (wide)   wide.textContent   = `\u00A9 ${yr} Samin Yeasar Arabi`;
+  if (narrow) narrow.textContent = `\u00A9 ${yr} SYA`;
+  if (left)   left.textContent   = `SYA \u2014 ${yr}`;
+  if (right)  right.textContent  = 'Samin Yeasar Arabi';
+  if (logo) {
+    logo.textContent = logoText;
+    logo.setAttribute('data-text', logoText);
+  }
+})();
+
+
+// ─── Share Dialog ────────────────────────────────────────────────────────────
+
+const PAGE_URL   = window.location.href;
+const PAGE_TITLE = 'Samin Yeasar Arabi — Portfolio';
+const PAGE_TEXT  = 'Check out the portfolio of Samin Yeasar Arabi, Full Stack Developer & AI Engineer.';
+
+const shareOverlay = document.getElementById('shareOverlay');
+const shareClose   = document.getElementById('shareClose');
+const btnShare     = document.getElementById('btnShare');
+const btnCopy      = document.getElementById('btnCopy');
+const shareUrlEl   = document.getElementById('shareUrl');
+
+shareUrlEl.textContent = PAGE_URL;
+document.getElementById('shareTwitter').href  = `https://twitter.com/intent/tweet?text=${encodeURIComponent(PAGE_TEXT)}&url=${encodeURIComponent(PAGE_URL)}`;
+document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(PAGE_URL)}`;
+document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(PAGE_URL)}`;
+document.getElementById('shareEmail').href    = `mailto:?subject=${encodeURIComponent(PAGE_TITLE)}&body=${encodeURIComponent(PAGE_TEXT + '\n' + PAGE_URL)}`;
+
+let shareOpen = false;
+
+function openShareDialog() {
+  if (shareOpen) return;
+  shareOpen = true;
+  shareOverlay.classList.add('is-open');
+  lockScroll();
+}
+
+function closeShareDialog() {
+  if (!shareOpen) return;
+  shareOpen = false;
+  shareOverlay.classList.remove('is-open');
+  unlockScroll();
+}
+
+btnShare.addEventListener('click', () => {
+  const isRealOrigin = ['https:', 'http:'].includes(window.location.protocol);
+  if (navigator.share && isRealOrigin) {
+    navigator.share({ title: PAGE_TITLE, text: PAGE_TEXT, url: PAGE_URL })
+      .catch(err => { if (err && err.name !== 'AbortError') openShareDialog(); });
+  } else {
+    openShareDialog();
+  }
+});
+
+shareClose.addEventListener('click', closeShareDialog);
+shareOverlay.addEventListener('click', e => { if (e.target === shareOverlay) closeShareDialog(); });
+
+btnCopy.addEventListener('click', () => {
+  const done = () => {
+    btnCopy.textContent = 'Copied!';
+    btnCopy.classList.add('copied');
+    setTimeout(() => {
+      btnCopy.textContent = 'Copy';
+      btnCopy.classList.remove('copied');
+    }, 2000);
+  };
+  navigator.clipboard.writeText(PAGE_URL).then(done).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = PAGE_URL;
+    ta.style.cssText = 'position:fixed;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    done();
+  });
+});
+
+
+// ─── Fullscreen ───────────────────────────────────────────────────────────────
+
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+const fsVeil        = document.getElementById('fs-transition-veil');
+
+function isNativeFs() {
+  return !!(
+    document.fullscreenElement       ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement    ||
+    document.msFullscreenElement
+  );
+}
+
+function isSimFs() { return document.body.classList.contains('sim-fullscreen'); }
+function isFs()    { return isNativeFs() || isSimFs(); }
+
+function supportsNativeFs() {
+  const el = document.documentElement;
+  return !!(
+    el.requestFullscreen       ||
+    el.webkitRequestFullscreen ||
+    el.mozRequestFullScreen    ||
+    el.msRequestFullscreen
+  );
+}
+
+function requestNativeFs() {
+  const el = document.documentElement;
+  if (el.requestFullscreen)       return el.requestFullscreen();
+  if (el.webkitRequestFullscreen) return el.webkitRequestFullscreen();
+  if (el.mozRequestFullScreen)    return el.mozRequestFullScreen();
+  if (el.msRequestFullscreen)     return el.msRequestFullscreen();
+}
+
+function exitNativeFs() {
+  if (document.exitFullscreen)       return document.exitFullscreen();
+  if (document.webkitExitFullscreen) return document.webkitExitFullscreen();
+  if (document.mozCancelFullScreen)  return document.mozCancelFullScreen();
+  if (document.msExitFullscreen)     return document.msExitFullscreen();
+}
+
+function withVeil(action) {
+  fsVeil.classList.remove('veil-out');
+  fsVeil.classList.add('veil-in');
+  setTimeout(() => {
+    action();
+    fsVeil.classList.remove('veil-in');
+    fsVeil.classList.add('veil-out');
+  }, 230);
+}
+
+function syncFullscreenState() {
+  const on = isFs();
+  fullscreenBtn.classList.toggle('is-fullscreen', on);
+  fullscreenBtn.setAttribute('data-tooltip', on ? 'Exit Fullscreen' : 'Fullscreen');
+  fullscreenBtn.setAttribute('aria-label',   on ? 'Exit fullscreen' : 'Enter fullscreen');
+}
+
+function enterSimFs() {
+  document.body.classList.add('sim-fullscreen');
+  syncFullscreenState();
+}
+
+function exitSimFs() {
+  document.body.classList.remove('sim-fullscreen');
+  syncFullscreenState();
+}
+
+fullscreenBtn.addEventListener('click', () => {
+  if (isFs()) {
+    isNativeFs() ? exitNativeFs()?.catch(() => {}) : exitSimFs();
+  } else {
+    supportsNativeFs()
+      ? withVeil(() => requestNativeFs()?.catch(() => enterSimFs()))
+      : withVeil(enterSimFs);
+  }
+});
+
+['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange']
+  .forEach(ev => document.addEventListener(ev, syncFullscreenState));
+
+
+// ─── Keyboard Shortcuts ───────────────────────────────────────────────────────
+
+// Section scroll helper
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+document.addEventListener('keydown', e => {
+  const tag     = document.activeElement && document.activeElement.tagName;
+  const inInput = tag === 'INPUT' || tag === 'TEXTAREA';
+
+  if (e.key === 'Escape') {
+    closeMobileMenu();
+    closeShareDialog();
+    if (isSimFs()) withVeil(exitSimFs);
+    return;
+  }
+
+  // ── Alt shortcuts ─────────────────────────────────────────────────────────
+  // Using Alt instead of Ctrl/Cmd avoids conflicts with browser-native shortcuts
+  if (e.altKey && !e.ctrlKey && !e.metaKey && !inInput) {
+    if (e.key === 'f') {
+      e.preventDefault();
+      if (isFs()) {
+        isNativeFs() ? exitNativeFs()?.catch(() => {}) : exitSimFs();
+      } else {
+        supportsNativeFs()
+          ? withVeil(() => requestNativeFs()?.catch(() => enterSimFs()))
+          : withVeil(enterSimFs);
+      }
+      return;
+    }
+    if (e.key === 'm') {
+      e.preventDefault();
+      applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      return;
+    }
+    if (e.key === 's') {
+      e.preventDefault();
+      document.getElementById('btnShare').click();
+      return;
+    }
+    if (e.key === 't') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+  }
+
+  // ── Shift shortcuts (section navigation) ─────────────────────────────────
+  if (e.shiftKey && !e.ctrlKey && !e.metaKey && !e.altKey && !inInput) {
+    if (e.key === 'A') { e.preventDefault(); closeMobileMenu(); scrollToSection('about');    return; }
+    if (e.key === 'S') { e.preventDefault(); closeMobileMenu(); scrollToSection('skills');   return; }
+    if (e.key === 'P') { e.preventDefault(); closeMobileMenu(); scrollToSection('projects'); return; }
+    if (e.key === 'C') { e.preventDefault(); closeMobileMenu(); scrollToSection('contact');  return; }
+  }
+});
+
+
+// ─── Back to Top ──────────────────────────────────────────────────────────────
+
+document.getElementById('btnTop').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+</script>
+
+</body>
+</html>
